@@ -72,6 +72,10 @@ public class Person {
                 .setAddress(this.address);
     }
 
+    public static Builder builder() {
+        return new Builder();
+    }
+
     @Override
     public String toString() {
         return String.format("""

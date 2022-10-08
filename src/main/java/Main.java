@@ -1,5 +1,6 @@
 public class Main {
     public static void main(String[] args) {
+
         Person innerPersonBuilder = new Person.Builder()
                 .setName("jon")
                 .setSurname("Malkovich")
@@ -29,10 +30,18 @@ public class Main {
         var outerPersonChildBuilder = outerPersonBuilder.newOuterChildBuilder();
         var outerChild = outerPersonChildBuilder.setName("Kate").build();
 
+        Person builderMethod = Person.builder()
+                .setName("Mark")
+                .setSurname("Strong")
+                .setAge(50)
+                .setAddress("England")
+                .build();
+
         System.out.println(innerPersonBuilder);
         System.out.println(outerPersonBuilder);
         System.out.println(outerChild);
         System.out.println(innerChild);
+        System.out.println(builderMethod);
 
 
     }
